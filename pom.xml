@@ -23,6 +23,24 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+	<scm>
+		<connection>scm:git:ssh://github.com:surech/ponr-batch.git</connection>
+		<developerConnection>scm:git:ssh://github.com:surech/ponr-batch.git</developerConnection>
+		<url>scm:git:ssh://github.com:surech/ponr-batch.git</url>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>hosted.ponr.releases</id>
+			<url>http://repo.surech.ch/content/repositories/hosted.ponr.releases</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>hosted.ponr.snapshots</id>
+			<url>http://repo.surech.ch/content/repositories/hosted.ponr.snapshot</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -87,6 +105,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
